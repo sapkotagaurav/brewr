@@ -1,0 +1,52 @@
+
+
+.main-table {
+
+    width: 100vw;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: medium;
+    border-radius: 24px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    
+}
+/* 
+.filters {
+    margin-left: 150px;
+    padding-bottom: 20px;
+    padding-top:10px;
+    display: flex;
+}
+
+.dateFilter {
+    margin-right: 18px;
+}
+
+.phaseFilter {
+    margin-right: 10px;
+}
+
+.btn {
+    color:white;
+    font-family: 'Avenir';
+    background-color: darkslateblue;
+} */
+
+th {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-right: 50px;
+}
+
+td {
+    width: 1000px;
+}
+
+table {
+    margin-left:10px;
+    text-align: center;
+    border-spacing: 10px;
+  }

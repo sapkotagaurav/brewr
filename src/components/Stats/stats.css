@@ -1,0 +1,12 @@
+.statCard{
+    background-color: rgba(0,0,0,0.2);
+    height: auto;
+    width: auto;
+    width: 300px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    font-size: medium;
+    border-radius: 24px;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    margin-bottom: 30px;
+}
