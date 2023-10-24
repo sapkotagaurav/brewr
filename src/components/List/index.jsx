@@ -1,4 +1,5 @@
 import './list.css'
+import { Link } from 'react-router-dom';
 const List = (props) => {
 
 
@@ -19,14 +20,16 @@ const List = (props) => {
             </thead>
             <tbody>
                 {props.data.map(e =>
+                
                     <tr key={e.id}>
-                        <td>{e.name}</td>
+                       <td><Link to={"/details/"+e.id}>{e.name}</Link></td>
                         <td>{e.street}</td>
                         <td>{e.city}</td>
                         <td>{e.state}</td>
                         <td>{e.postal_code}</td>
                         <td>{e.brewery_type}</td>
-                    </tr>)}
+                    </tr>
+                     )}
             </tbody>
         </table>:<h1>Loading</h1>
     )

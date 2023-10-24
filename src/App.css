@@ -41,3 +41,10 @@ body{
   padding: 10px;
   margin-bottom: 20px;
 }
+
+.chart{
+  background-color: aliceblue;
+}
+.piechart{
+  background-color: rgb(6, 21, 34,0.8);
+}

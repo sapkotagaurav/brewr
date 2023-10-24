@@ -3,6 +3,8 @@ import Stats from './components/Stats'
 import './App.css'
 import List from './components/List'
 import Sidebar from './components/Sidebar'
+import TopCitiesChart from './components/Chart'
+import  PiCh  from './components/PiCh'
 
 function App() {
 
@@ -100,7 +102,11 @@ function App() {
     
     setFiltered(fd)
   }
+const b = (e) =>{
+  setState(e.target.value);
+  fetchmeta();
 
+}
 
 
   return (
@@ -114,8 +120,8 @@ function App() {
         <label htmlFor="searchName">Search(by city, name or street):</label>
         <input type="text" name='searchName' onChange={search} />
         <label htmlFor="states">State:</label>
-        <select name="state" id="states">
-          {states.map(e => <option key={e} onClick={() => { setState(e); fetchmeta() }}>{e}</option>)}
+        <select name="state" onChange={b} id="states">
+          {states.map(e => <option value={e} key={e} >{e}</option>)}
         </select>
         <label htmlFor="slider"> Size:</label><input type='range' min={0} max={10} onChange={sliderChange}/>
 
@@ -124,6 +130,14 @@ function App() {
         <List data={filtered} />
       </div>
       <Sidebar/>
+      <div className="chart">
+        <h1 style={{color:'black'}}>Bar graph to show brewery in each city</h1>
+        <TopCitiesChart data={list}></TopCitiesChart>
+      </div>
+      <div className="piechart">
+        <h1>Piechart to show size of brewery in each state</h1>
+        <PiCh data={list}/>
+      </div>
 
 
     </div>
